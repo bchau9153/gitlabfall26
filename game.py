@@ -2,7 +2,12 @@
 
 #contributors
 #gpoppe
+
 #tGuerrero
+
+#ibayraktar
+
+
 
 #imported libraries
 
@@ -698,6 +703,115 @@ def room8():
     #room8
     print("Welcome to the best game!")
 
+
+    print ("Hello hungry traveller!")
+
+    def game():
+        name = input("Welcome! What is your name? ")
+        print(name, ", you have been travelling for a long time, and you look very hungry. Your journey home has 5 stops, and the food choices you make along the way will affect your health.")
+        print("Let's see how healthy you can stay by the time you get home!")
+
+        places = ["Dominos Pizza", "McDonald's", "Subway", "Whole Foods", "Seafood Grill"]
+        health_score = 0
+
+        for stop in range(5):
+            print(" ")
+            print("Stop", stop + 1, "of 5: you arrive at", places[stop])
+
+            if stop == 0:
+                print("Welcome to Dominos Pizza! Our menu items are:")
+                count1 = 1
+                menu1 = ["Triple-cheese pizza", "Thin crust veggie-pizza", "Cauliflower dough veggie pizza"]
+                for i in menu1:
+                    print(count1, i)
+                    count1 = count1 + 1
+                select1 = int(input("Enter the item number(1-3) you want to order! :"))
+                if select1 == 1:
+                    print("Oh no!, too much cheese, your blood pressure will increase!")
+                    health_score = health_score - 1
+                else:
+                    print("Great choice, healthy and yummy!")
+                    health_score = health_score + 1
+
+            if stop == 1:
+                print("McDonalds! Our menu items are:")
+                count2 = 1
+                menu2 = ["Mc-chicken-Salad", "Triple-burger+extra cheese", "Large soda+Fries+Double cheese burger"]
+                for i in menu2:
+                    print(count2, i)
+                    count2 = count2 + 1
+                select2 = int(input("Enter the item number(1-3) you want to order! :"))
+                if select2 == 1:
+                    print("A chicken salad, protein and fiber, excellent choice!")
+                    health_score = health_score + 1
+                else:
+                    print("Shall we schedule a doctor appointment for a possible heart issue!!")
+                    health_score = health_score - 1
+
+            if stop == 2:
+                print("Subway! Our menu items are:")
+                count3 = 1
+                menu3 = ["Tuna Sandwich", "Veggie wrap", "Extra bacon + double cheese footlong"]
+                for i in menu3:
+                    print(count3, i)
+                    count3 = count3 + 1
+                select3 = int(input("Enter the item number(1-3) you want to order! :"))
+                if select3 == 3:
+                    print("Oh no! High cholesterol in your blood!!")
+                    health_score = health_score - 1
+                else:
+                    print("Well done, you made a healthy and tasty choice!")
+                    health_score = health_score + 1
+
+            if stop == 3:
+                print("Wholefoods! Our menu items are:")
+                count4 = 1
+                menu4 = ["Falafel + salad", "Lentil soup + bean salad", "Ice cream-filled brownies"]
+                for i in menu4:
+                    print(count4, i)
+                    count4 = count4 + 1
+                select4 = int(input("Enter the item number(1-3) you want to order! :"))
+                if select4 == 1 or select4 == 2:
+                    print("Great choice, keep travelling, you have a healthy diet!")
+                    health_score = health_score + 1
+                else:
+                    print("Come on! Is this your best choice at the Whole Foods for hunger!!")
+                    health_score = health_score - 1
+
+            if stop == 4:
+                print("Seafood Grill! Our menu items are:")
+                count5 = 1
+                menu5 = ["Grilled tuna", "Salmon Salad", "Steamed mussels with crispy oysters"]
+                for i in menu5:
+                    print(count5, i)
+                    count5 = count5 + 1
+                select5 = int(input("Enter the item number(1-3) you want to order! :"))
+                if select5 == 1 or select5 == 2:
+                    print("My favorite, you have good taste buds!")
+                    health_score = health_score + 1
+                else:
+                    print("Heads-up!, Don't eat too much and make sure they are well cooked - high parasite risk!!")
+                    health_score = health_score - 1
+
+        print(" ")
+        print(name, ", you have made it home! Your final health score is", health_score)
+
+        if health_score >= 3:
+            print("You feel amazing! You are fit, full of energy, and your blood pressure is right where it should be.")
+        elif health_score >= 0:
+            print("You made it home okay, but a few of those choices could catch up with you. Try to eat healthier next trip!")
+        else:
+            print("You collapse onto the couch. The doctor says you are prediabetic and have high blood pressure. Time for a diet change!")
+
+
+    play = input("Would you like to eat something? type: yes or no ")
+
+    while play == "yes":
+        game()
+        play = input("Please enter -yes- if you are still hungry! ")
+    else:
+        print("Bye!")
+
 def room9():
     #room9
     print("This door is locked.")
@@ -1181,6 +1295,153 @@ def room13():
     #room13
     #Muhammad Mahmood
     print("Fallout 389")
+    play = "yes"
+
+    while play == "yes":
+        name = input("What is your name? ")
+
+        #Final addition (List)
+        inventory = []
+
+        print("Hello", name)
+        print("You wake up in the middle of a destroyed fallout bunker. ")
+        print("Emergency lights are flashing that send out a warning. ")
+        print("It says: Warning the bunker will lose power soon. Abandon immediately. ")
+
+
+        #Choice 1
+
+        print("You come across three hallways.")
+        print("1 leads to a red hallway.")
+        print("2 leads to a blue hallway.")
+        print("3 leads to a yellow hallway.")
+
+        choice1 = int(input("Which hallway will you choose? "))
+        if choice1 == 1:
+            print("The red hallway leads to a damaged reactor.")
+            print("Radiation fills the room.")
+            print(name, "has died.")
+        elif choice1 == 2:
+            print("The red hallway takes you to an elevator")
+            print("You board and arrive at the next level above.")
+        elif choice1 == 3:
+            print("The yellow hallway leads to a warp room.")
+            print("You are warped to the next room above.")
+        else:
+            print("Invalid option")
+
+        if choice1 == 2 or choice1 == 3:
+            #Choice 2
+            print("You see another 3 rooms. ")
+            print("1 is a medical room")
+            print("2 is a security room")
+            print("3 is a storage room")
+
+            choice2 = int(input("Which room do you enter? "))
+            if choice2 == 1:
+                print("The door locks behind you.")
+                print("There are no other exits.")
+                print(name, "is trapped and has died.")
+            elif choice2 == 2:
+                print("Inside the security room, you find a security card.")
+                print("You take the access card and continue on your way.")
+
+                #Final addition
+                inventory.append("Security card")
+                print("Your inventory: ")
+                for x in inventory:
+                    print(x)
+
+
+            elif choice2 == 3:
+                print("The storage room is filled with boxes.")
+                print("Inside one of the boxes you find an access card.")
+                print("You take the access card and continue on your way.")
+
+                #Final Addition (Loop)
+                inventory.append("Security card")
+                print("You inventory: ")
+                for x in inventory:
+                    print(x)
+
+            else:
+                print("Invalid option")
+
+            if choice2 == 2 or choice2 == 3:
+                #Choice 3
+                    print("You arrive at a security door.")
+                    print("There are 3 ways to deal with this door:")
+                    print("1: Break the door")
+                    print("2: Use the access card")
+                    print("3: Search for another path")
+
+                    choice3 = int(input("How do you proceed? "))
+                    if choice3 == 1:
+                        print("You ram the door with all of your might.")
+                        print("To your surprise, the door collapses with ease.")
+                        print("You proceed into the room.")
+                    elif choice3 == 2:
+                        print("You take the security key from your inventory.")
+                        print("You use the access key.")
+                        print("The door beeps and opens, the rust screaming in exhaustion.")
+
+                        #Final addition (List)
+                        inventory.pop(0)
+
+                    elif choice3 == 3:
+                        print("You search for a different route.")
+                        print("However, you get lost in the labyrinth and perish.")
+                        print(name,"has died.")
+                    else:
+                        print("Invalid option")
+
+                    if choice3 == 1 or choice3 == 2:
+                    #Choice 4
+                        print("You enter the control room with three options.")
+                        print("1 is to restore power to the old vault.")
+                        print("2 is to send out a distres signal to the wasteland.")
+                        print("3 is to explore the garage for a car to drive out.")
+                        
+                        choice4 = int(input("Which option do you choose?"))
+                        if choice4 == 1:
+                            print("Restoring the power wakes up the security bots.")
+                            print("The bots surround and subdue you.")
+                            print(name,"has died.")
+                        elif choice4 == 2:
+                            print("The distress signal is sent. But the wasteland yields no response.")
+                            print("The station runs out of power and no one comes to your aid.")
+                            print(name,"has died")
+                        elif choice4 == 3:
+                            print("The garage unlocks at a touch of the button of the main computer.")
+                            print("You hurry towards the garage.")
+
+                            #Choice 5
+                            print("You arrive at the garage and see three cars.")
+                            print("1 is a red car")
+                            print("2 is a blue car")
+                            print("3 is a yellow car")
+
+                            choice5 = int(input("Which car do you take? "))
+                            if choice5 == 1:
+                                print("The red car is out of gas.")
+                                print("The garage locks you in before you can escape.")
+                                print(name,"has died.")
+                            elif choice5 == 2:
+                                print("The blue car roars to life!")
+                                print("You drive off into the wasteland, leaving the vault behind.")
+                                print("Congratulations",name,"you escaped the Vault!")
+                            elif choice5 == 3:
+                                print("The yellow car is too damaged to drive.")
+                                print("The garage locks you in before you can escape.")
+                                print(name,"has died.")
+                            else:
+                                print("Invalid respoonse")
+                        else:
+                            print("Invalid response")
+
+
+        play = input("Would you like to play again? yes or no?")
+    
 
 def room14():
     #room14
@@ -1771,6 +2032,117 @@ def room26():
     #room26
     #Janelle Piva
     print("The Haunted School.")
+
+    play = "yes"
+
+    while play == "yes":
+
+        name = input("Welcome to the haunted school! What is your name? ")
+
+        print("Hello", name, "you stayed late at school and suddenly all the lights went out.")
+        print("You hear the doors lock behind you. You need to find a way out!")
+        print("You hear a strange noise coming down the hallway and need to decide where to go.")
+
+        print("1. Classroom")
+        print("2. Library")
+        print("3. Gym")
+
+        menu = int(input("Where do you go? "))
+
+        if menu == 1:
+            print("You enter the classroom and the door locks behind you.")
+            print(name, "you are trapped!")
+
+        elif menu == 2:
+            print("You enter the library and hear the door slam behind you.")
+            print("You notice three items sitting on the table. One of them might help you escape.")
+
+            items = ["1. Flashlight", "2. Book", "3. Pencil"]
+
+            for i in items:
+                print(i)
+
+            menu = int(input("Which item do you take? "))
+
+            if menu == 1:
+                print("You grab a flashlight and turn it on.")
+                print("The light reveals three hallways hidden behind the bookshelves.")
+
+                print("1. Upstairs hallway")
+                print("2. Downstairs hallway")
+                print("3. Main hallway")
+
+                menu = int(input("Which hallway do you take? "))
+
+            if menu == 1:
+                print("You walk upstairs and hear footsteps behind you.")
+                print("Suddenly a black cat jumps out in front of you!")
+
+                cat = input("What would you name the black cat? ")
+
+                print(cat, "runs away and you continue down the hallway.")
+                print("You hear footsteps behind you.")
+                print("You turn around and see a ghost blocking your path!")
+
+                print("1. Hide")
+                print("2. Run")
+                print("3. Distract the ghost")
+
+                menu = int(input("What do you do? "))
+
+                if menu == 1:
+                    print("You hide, but the ghost finds you.")
+                    print(name, "you did not escape the haunted school!")
+
+                elif menu == 2:
+                    print("You run, but the ghost catches up to you.")
+                    print(name, "you did not escape the haunted school!")
+
+                elif menu == 3:
+                    print("You throw an object down the hallway and distract the ghost.")
+                    print("You run downstairs and see three possible exits.")
+
+                    print("1. Front doors")
+                    print("2. Parking lot gate")
+                    print("3. Emergency exit")
+
+                    menu = int(input("Which exit do you try? "))
+
+                    if menu == 1:
+                        print("You run to the front doors, but they are locked.")
+                        print(name, "you did not escape the haunted school!")
+
+                    elif menu == 2:
+                        print("You run to the parking lot gate, but it suddenly locks.")
+                        print(name, "you did not escape the haunted school!")
+
+                    elif menu == 3:
+                        print("You push open the emergency exit and escape!")
+                        print(name, "you escaped the haunted school!")
+
+            elif menu == 2:
+                print("You go downstairs and become trapped in the basement.")
+                print(name, "you did not escape the haunted school!")
+
+            elif menu == 3:
+                print("You take the main hallway and end up back where you started.")
+                print(name, "you did not escape the haunted school!")
+
+        elif menu == 2:
+            print("You open the book and the pages begin turning by themselves.")
+            print("You become trapped in the haunted story.")
+            print(name, "you did not escape the haunted school!")
+
+        elif menu == 3:
+            print("You pick up the pencil and it begins writing by itself.")
+            print("The library doors lock and the lights go out.")
+            print(name, "you did not escape the haunted school!")
+
+        elif menu == 3:
+            print("You enter the gym, but there is no way out.")
+            print(name, "you did not escape the haunted school!")
+
+        play = input("Would you like to play again? ")  
 
 def room27():
     #room27
