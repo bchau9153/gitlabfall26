@@ -2333,6 +2333,8 @@ def room20():
        play_again = input("Would you like to play again? ")
 
    print("Thanks for playing " + name + "! Bazinga!")
+ 
+def room21():
     #room21
     #Dawei Sun
     inventory = []
