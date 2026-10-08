@@ -2,7 +2,9 @@
 
 #contributors
 #gpoppe
+#jyock   Room 14 - Jeff Yock - JYguitar
 #ibayraktar
+
 
 
 #imported libraries
@@ -1519,7 +1521,7 @@ def room14():
     print("The water that entered with you is quickly draining through them.")
     print(" ")
     print("Though you feel disoriented by the room's appearance, you approach the cylinder.")
-    print("Inscribed in the circular top, in colorful Comis Sans, is the following message... ")
+    print("Inscribed in the circular top, in colorful Comic Sans, is the following message... ")
     print("Will you play Best Student Ever? Check yes or no.")
     print("Beneath that are two crudely drawn squares that are marked 'yes' and 'no' in lower case letters.")
     print("You somehow feel it necessary to use the stylus to check one of the boxes.")
@@ -1573,7 +1575,8 @@ def room14():
               results(scoreTot)
               print(" ")
         play = input("Would you like to relive this day again? Type yes or no: ")
-    print("Game Over")
+    print(" ")
+    print("You suddenly feel disoriented as your surroundings begin to blur")
 
 
 def room15():
