@@ -1905,7 +1905,175 @@ def room17():
 def room18():
    #room18
     #Cesar Cano
-    print("Dark Gengar.")
+
+    score = 0
+    inventory = []
+
+    print("")
+    print("Dark Gengar's Robotics Lab")
+    print("")
+    name = input("What is your name? ")
+
+    print("Hello", name)
+    print("You enter room 18 and the door locks behind you.")
+    print("The room looks like an abandoned robotics lab.")
+    print("A strange purple Gengar appears on a computer screen.")
+    print("You must make your way through the lab to escape.")
+    print("")
+
+
+    # Decision 1
+
+    print("You see three objects near the door.")
+    print("1. A flashlight")
+    print("2. A basketball")
+    print("3. A broken chair")
+
+    choice = int(input("Which item do you take? "))
+
+    if choice == 1:
+        print("You take the flashlight.")
+        inventory.append("flashlight")
+        score = score + 1
+    elif choice == 2:
+        print("You take the basketball.")
+        inventory.append("basketball")
+    elif choice == 3:
+        print("You take part of the broken chair.")
+        inventory.append("wood")
+
+    print("")
+
+
+    # New feature - display inventory using a loop
+
+    print("Items in your inventory:")
+
+    for item in inventory:
+        print(item)
+
+    print("")
+
+
+    # Decision 2
+
+    print("You enter the robot work area and find three possible paths.")
+    print("1. Walk through the dark storage room")
+    print("2. Follow the emergency exit signs")
+    print("3. Crawl under the robotics tables")
+
+    choice = int(input("Which path do you choose? "))
+
+    if choice == 1:
+        print("You carefully walk through the dark storage room.")
+
+        if "flashlight" in inventory:
+            print("Your flashlight helps you see a keycard on the floor.")
+            inventory.append("keycard")
+            score = score + 1
+        else:
+            print("It is difficult to see without a flashlight.")
+
+    elif choice == 2:
+        print("The exit signs lead you toward another locked door.")
+
+    elif choice == 3:
+        print("You crawl under the tables and find another part of the lab.")
+
+    print("")
+
+
+    # Decision 3
+
+    print("A robot blocks your path.")
+    print("1. Turn off its power switch")
+    print("2. Push the robot out of the way")
+    print("3. Yell at the robot")
+
+    choice = int(input("What do you do? "))
+
+    if choice == 1:
+        print("You safely turn off the robot.")
+        score = score + 1
+
+    elif choice == 2:
+        print("The robot is heavy, but you manage to move around it.")
+
+    elif choice == 3:
+        print("The robot does not respond, so you walk around it.")
+
+    print("")
+
+
+    # Decision 4
+
+    print("You reach a computer that controls the security doors.")
+    print("1. Turn off the computer")
+    print("2. Press the emergency unlock button")
+    print("3. Restart the computer")
+
+    choice = int(input("What do you choose? "))
+
+    if choice == 1:
+        print("The computer shuts down, but the doors remain locked.")
+
+    elif choice == 2:
+        print("The emergency doors unlock.")
+        score = score + 1
+
+    elif choice == 3:
+        print("The computer restarts.")
+        print("Dark Gengar appears on the screen and laughs.")
+
+    print("")
+
+
+    # Display inventory again
+
+    print("Your current inventory:")
+
+    for item in inventory:
+        print(item)
+
+    print("")
+
+
+    # Decision 5
+
+    print("You reach the final hallway and see three doors.")
+    print("1. STEM Lab")
+    print("2. Emergency Exit")
+    print("3. Security Door")
+
+    choice = int(input("Which door do you choose? "))
+
+    if choice == 1:
+        print("You enter another classroom but cannot find the exit.")
+
+    elif choice == 2:
+        print("You found the emergency exit!")
+        score = score + 1
+
+    elif choice == 3:
+
+        if "keycard" in inventory:
+            print("You use the keycard to unlock the security door!")
+            print("Behind the door is the exit.")
+            score = score + 1
+        else:
+            print("The security door requires a keycard.")
+
+    print("")
+
+
+    # Final result
+
+    if score >= 3:
+        print("Congratulations", name, "you escaped Dark Gengar's Robotics Lab!")
+        print("Gengar disappears and Room 18 opens.")
+    else:
+        print("Sorry", name, "you were unable to escape Room 18.")
+        print("Dark Gengar wins this time.")
 
 def room19():
     #Patricia Flores
