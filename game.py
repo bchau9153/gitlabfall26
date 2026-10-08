@@ -2196,8 +2196,7 @@ def room19():
     #Patricia Flores
     print("Star Wars")
 
-oroom21():
-m20():
+def room20():
     #room20
     #Benson Chau
    play_again = "yes"
